@@ -8,7 +8,9 @@ class Client {
 
         this.Main = _main;
 
+        console.log("go");
         SELF.Terminal("ps -A", "", function (_error_code, _messages) {
+            console.log(_error_code);
             if (_error_code === 0) {
                 console.log(_messages);
                 for(let i = 0; i < _messages.length; i++){
