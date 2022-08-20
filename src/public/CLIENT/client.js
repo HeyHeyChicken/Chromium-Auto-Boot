@@ -4,15 +4,7 @@ class Client {
 
         this.Main = _main;
 
-        // Sockets from client
-        this.Main.IOServer.on("connection", function(socket){
-
-        });
-
-        // Sockets from server
-        this.Main.IOClient.on("abc", function(_token, _autoplay){
-
-        });
+        console.log("gg");
     }
 }
 
