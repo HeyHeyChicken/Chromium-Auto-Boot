@@ -1,8 +1,8 @@
 {
 	"worksOffline" : true,
 	"description" : {
-		"fr-FR": "Cette compétence vous permettra d'executer des commandes terminales sur vos clients.<br/><br/>Vous y trouverez en démonstration une commande de démarrage automatique de Chromium.",
-		"en-US": "This skill will allow you to execute terminal commands on your clients.<br/><br/>There you will find a demo of a Chromium autostart command."
+		"fr-FR": "Cette commande vous permet de démarrer automatiquement Chromium sur vos clients hébergés sur un raspberry.",
+		"en-US": "This command allows you to automatically start Chromium on your customers hosted on a raspberry."
 	},
 	"language": [
 		"fr-FR",
