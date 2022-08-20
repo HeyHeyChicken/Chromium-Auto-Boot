@@ -8,9 +8,7 @@ class Client {
 
         this.Main = _main;
 
-        console.log("ok");
-        _main.Log("GGG");
-
+        SELF.Main.Log("We check if Chromium is on.");
         SELF.Terminal("ps -A", "", function (_error_code, _messages) {
             if (_error_code === 0) {
                 let chromiumIsLaunched = false;
@@ -21,16 +19,18 @@ class Client {
                     }
                 }
                 if(!chromiumIsLaunched){
-                  SELF.Main.Log("Chromium is booting");
+                  SELF.Main.Log("Chromium is off.");
+                  SELF.Main.Log("We start Chromium.");
                   SELF.Terminal("chromium-browser http://localhost:" + SELF.Main.Settings.WebServerPort, "", function (_error_code, _messages) {
                       if (_error_code === 0) {
                       } else {
                           console.log("ChromiumAutoBoot error: " + _error_code);
+                          console.log(_messages);
                       }
                   });
                 }
                 else{
-                  SELF.Main.Log("Chromium is already booted");
+                  SELF.Main.Log("Chromium is already on.");
                 }
             } else {
                 console.log("ChromiumAutoBoot error: " + _error_code);
