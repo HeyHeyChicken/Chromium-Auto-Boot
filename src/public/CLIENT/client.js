@@ -8,13 +8,20 @@ class Client {
 
         this.Main = _main;
 
-        console.log("go");
         SELF.Terminal("ps -A", "", function (_error_code, _messages) {
-            console.log(_error_code);
             if (_error_code === 0) {
-                console.log(_messages);
+                let chromiumIsLaunched = false;
                 for(let i = 0; i < _messages.length; i++){
-                    console.log(_messages[i]);
+                    if(_messages[i].includes("chromium")){
+                        chromiumIsLaunched = true;
+                        break;
+                    }
+                }
+                if(chromiumIsLaunched){
+                  console.log("Chromium is launched");
+                }
+                else{
+                  console.log("Chromium is not launched");
                 }
             } else {
                 console.log("npm install error : " + _error_code);
