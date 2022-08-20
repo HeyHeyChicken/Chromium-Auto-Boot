@@ -11,7 +11,7 @@ class Client {
         SELF.Terminal("ps -A", "", function (_error_code, _messages) {
             if (_error_code === 0) {
                 for(let i = 0; i < _messages.length; i++){
-                  console.loh(_messages[i]);
+                  console.log(_messages[i]);
                 }
             } else {
                 console.log("npm install error : " + _error_code);
