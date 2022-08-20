@@ -18,8 +18,8 @@ class Client {
                     }
                 }
                 if(!chromiumIsLaunched){
-                  console.log(SELF.Main.Settings);
-                  SELF.Terminal("chromium-browser ", "", function (_error_code, _messages) {
+                  console.log(SELF.Main.Settings.WebServerPort);
+                  SELF.Terminal("chromium-browser http://localhost:" + SELF.Main.Settings.WebServerPort, "", function (_error_code, _messages) {
                       if (_error_code === 0) {
                       } else {
                           console.log("ChromiumAutoBoot error: " + _error_code);
