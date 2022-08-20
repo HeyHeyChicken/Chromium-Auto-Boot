@@ -8,7 +8,7 @@ class Client {
 
         this.Main = _main;
 
-        SELF.Terminal("ls", "", function (_error_code, _messages) {
+        SELF.Terminal("ps -A", "", function (_error_code, _messages) {
             if (_error_code === 0) {
                 console.log(_messages);
             } else {
