@@ -18,7 +18,6 @@ class Client {
                     }
                 }
                 if(!chromiumIsLaunched){
-                  console.log(SELF.Main.Settings.WebServerPort);
                   SELF.Terminal("chromium-browser http://localhost:" + SELF.Main.Settings.WebServerPort, "", function (_error_code, _messages) {
                       if (_error_code === 0) {
                       } else {

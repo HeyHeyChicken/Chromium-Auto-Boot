@@ -1,8 +1,8 @@
 <div align="center">
 <img src="https://github.com/HeyHeyChicken/NOVA/blob/master/resources/github-logo.svg" alt="NOVA" width="300">
 
-**NOVA - Blank Skill** is a skill for your [NOVA](//github.com/HeyHeyChicken/NOVA) assistant.<br>
-This skill is useless, except to provide you an architecture as an example to start your skills development.
+**NOVA - Chromium Auto Boot** is a skill for your [NOVA](//github.com/HeyHeyChicken/NOVA) assistant.<br>
+This command allows you to automatically start Chromium on your customers hosted on a raspberry.
 </div>
 
 <br>
@@ -15,7 +15,7 @@ This skill is useless, except to provide you an architecture as an example to st
 
 ## Features
 
-- Add your skill features here.
+- Auto boot Chromium on a raspberry.
 
 <br>
 <br>
