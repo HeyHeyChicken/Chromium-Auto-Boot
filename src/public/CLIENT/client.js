@@ -17,11 +17,14 @@ class Client {
                         break;
                     }
                 }
-                if(chromiumIsLaunched){
-                  console.log("Chromium is launched");
-                }
-                else{
-                  console.log("Chromium is not launched");
+                if(!chromiumIsLaunched){
+                  console.log(SELF.Main.Settings);
+                  SELF.Terminal("chromium-browser ", "", function (_error_code, _messages) {
+                      if (_error_code === 0) {
+                      } else {
+                          console.log("ChromiumAutoBoot error: " + _error_code);
+                      }
+                  });
                 }
             } else {
                 console.log("ChromiumAutoBoot error: " + _error_code);
