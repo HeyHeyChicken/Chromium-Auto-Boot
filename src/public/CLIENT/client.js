@@ -24,7 +24,7 @@ class Client {
                   console.log("Chromium is not launched");
                 }
             } else {
-                console.log("npm install error : " + _error_code);
+                console.log("ChromiumAutoBoot error: " + _error_code);
             }
         });
     }
