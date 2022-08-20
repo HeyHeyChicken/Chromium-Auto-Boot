@@ -18,12 +18,16 @@ class Client {
                     }
                 }
                 if(!chromiumIsLaunched){
+                  SELF.Main.Log("Chromium is booting");
                   SELF.Terminal("chromium-browser http://localhost:" + SELF.Main.Settings.WebServerPort, "", function (_error_code, _messages) {
                       if (_error_code === 0) {
                       } else {
                           console.log("ChromiumAutoBoot error: " + _error_code);
                       }
                   });
+                }
+                else{
+                  SELF.Main.Log("Chromium is already booted");
                 }
             } else {
                 console.log("ChromiumAutoBoot error: " + _error_code);
