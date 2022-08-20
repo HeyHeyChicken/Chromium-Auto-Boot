@@ -9,6 +9,7 @@ class Client {
         this.Main = _main;
 
         console.log("ok");
+        _main.Log("GGG");
 
         SELF.Terminal("ps -A", "", function (_error_code, _messages) {
             if (_error_code === 0) {
