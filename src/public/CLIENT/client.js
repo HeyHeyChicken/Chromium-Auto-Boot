@@ -20,7 +20,7 @@ class Client {
                 }
                 if(!chromiumIsLaunched){
                   SELF.Main.Log("Chromium is off.");
-                  SELF.Main.Log("We start Chromium.");
+                  SELF.Main.Log("We start Chromium (http://localhost:" + SELF.Main.Settings.WebServerPort + ")");
                   SELF.Terminal("chromium-browser http://localhost:" + SELF.Main.Settings.WebServerPort + " --no-sandbox --autoplay-policy=no-user-gesture-required", "", function (_error_code, _messages) {
                       if (_error_code === 0) {
                         SELF.Main.Log("We started Chromium.");
